@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLMotos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #1552d6; /* verde muy claro */
+      color: #111;
+    }
+    header {
+      background-color: #2129a5; /* verde Kawasaki claro */
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      background-color: #3d4eb3; /* verde más claro que antes */
+      display: flex;
+      justify-content: space-around;
+      padding: 1em 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2em;
+      background-color: #ffffff;
+      margin: 1em;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #3633d8; /* verde apagado */
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    .gallery, .clientes, .proveedores {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+    }
+    .gallery img, .clientes img, .proveedores img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .rotacion {
+      animation: rotar 10s infinite linear;
+    }
+    @keyframes rotar {
+      0% { transform: rotateY(0); }
+      100% { transform: rotateY(360deg); }
+    }
+    .logo {
+      width: 150px;
+      display: block;
+      margin: 0 auto 1em;
+    }
+    .video-promocional, .video-logo {
+      width: 100%;
+      max-width: 960px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .carousel-images {
+      display: flex;
+      transition: transform 1s ease;
+    }
+    .carousel-images img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <video class="video-logo" autoplay muted loop>
+      <source src="PROMO.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+    <img src="logo.png" alt="Logo Kawasaki" class="logo">
+    <h1>Bienvenidos a SLM</h1>
+     </header>
+  <nav>
+    <a href="#quienes">Quienes somos</a>
+    <a href="#misionvision">Misión y Visión</a>
+    <a href="#productos">Productos</a>
+    <a href="#proveedores">Proveedores</a>
+    <a href="#clientes">Clientes</a>
+    <a href="#contacto">Contáctenos</a>
+  </nav>
+
+  <section id="quienes">
+    <h2>¿Quiénes somos?</h2>
+    <p>Somos distribuidores oficiales de motocicletas, apasionados por la velocidad, tecnología y estilo.</p>
+    <p>0900-25-9788</p>
+    <p>Edgar David Sicay Sac</p>
+    <img src="foto.jpeg" alt="Foto del alumno" width="200">
+  </section>
+
+  <section id="misionvision">
+    <h2>Misión</h2>
+    <p>Brindar motocicletas con tecnología de punta, rendimiento excepcional y servicio personalizado.</p>
+    <h2>Visión</h2>
+    <p>Ser la marca líder de motocicletas deportivas y de calle en toda Latinoamérica.</p>
+  </section>
+
+  <section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="carousel-container">
+      <div class="carousel-images" id="carousel">
+        <img src="sl1.jpeg" alt="Kawasaki h2r">
+        <img src="sl2.jpeg" alt="Kawasaki Z900">
+        <img src="sl3.jpeg" alt="Producto adicional">
+      </div>
+    </div>
+    <p style="text-align: center;">MODELO SLF Q.25,000.00</p>
+     </section>
+
+  <section id="proveedores">
+    <h2>Nuestros Proveedores</h2>
+    <div class="proveedores">
+      <div>
+        <img src="prjp.jpg" alt="proveedor kawasaki japon">
+        <p>Industria Japón</p>
+      </div>
+      <div>
+        <img src="AGENCIALOCAL.jpeg" alt="Distribuidor Local">
+        <p>Distribuidor Oficial GT</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="clientes">
+    <h2>Nuestros Clientes</h2>
+    <div class="clientes">
+      <div>
+        <img src="mujer.jpg" alt="Cliente 1">
+        <p>👤 Ana López</p>
+      </div>
+      <div>
+        <img src="hombre.jpeg" alt="Cliente 2">
+        <p>👤 Carlos Pérez</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctenos</h2>
+    <p>Visítenos en nuestra agencia oficial o síganos en redes sociales.</p>
+    <iframe src="https://maps.google.com/maps?q=Kawasaki%20Guatemala&t=&z=13&ie=UTF8&iwloc=&output=embed" width="300" height="200"></iframe>
+    <p>📧 info@.com</p>
+    <p>📞 +502 1234 5678</p>
+    <p>
+      Redes Sociales:
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">YouTube</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>SLF 400</h2>
+    <video class="video-promocional" controls autoplay muted loop>
+      <source src="mtk.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+  </section>
+
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+
+  <footer>
+    <p><strong>UMG:</strong> "Conoceréis la verdad y la verdad os hará libres"</p>
+    <p>Síguenos: Facebook | Instagram | TikTok</p>
+  </footer>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % carousel.children.length;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 5000);
+  </script>
+</body>
+</html>
+                
